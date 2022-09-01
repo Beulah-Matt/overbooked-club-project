@@ -1,0 +1,69 @@
+{
+    "Books": [
+      {
+        "id": 1,
+        "title": "Boundaries",
+        "author": "Dr. Henry Cloud",
+        "reviews": "Start here if you struggle with setting boundaries in all your associations with people",
+        "isbn": "9794221645072",
+        "image": "https://tinyurl.com/229z4b7f"
+      },
+      {
+        "id": 2,
+        "title": "The Sex Lives Of African Women.",
+        "author": "Nana Darkoa",
+        "reviews": "This book explores the sexuality of African women in a manner never told before",
+        "isbn": "9794221645073",
+        "image": "https://i.postimg.cc/3kSdm5xV/sexLives.png"
+      },
+      {
+        "id": 3,
+        "title": "Manic",
+        "author": "Terri Cheney",
+        "reviews": "The journey of a person with the bipolar disorder, demystyfied",
+        "isbn": "9794221645074",
+        "image": "https://i.postimg.cc/sf9285fh/manic.png"
+      },
+      {
+        "id": 4,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "reviews": "A journey into what the self can do, and how events align in favour",
+        "isbn": "9794221645075",
+        "image": "https://i.postimg.cc/F7vdQV6W/the-alchemist.png"
+      },
+      {
+        "id": 5,
+        "title": "The Secret Lives Of Baba Segi's Wives",
+        "author": "Lola Shoneyin",
+        "reviews": "You will want to read this. Find time",
+        "isbn": "9794221645076",
+        "image": "https://i.postimg.cc/yDYDDYs0/Babasegi.png"
+      },
+      {
+        "id": 6,
+        "title": "Being Mortal",
+        "author": "Atul Gawande",
+        "reviews": "Do you ever wonder what happens to the human body from a medical perspective? Of course you do.",
+        "isbn": "9794221645077",
+        "image": "https://i.postimg.cc/hf0J47WS/being-Mortal.png"
+      },
+      {
+        "id": 7,
+        "title": "Born A Crime",
+        "author": "Trevor Noah",
+        "reviews": "Apartheid from the eyes of a multicultural boy growing up in an intolerant South Africa. Trevor really gets you hooked",
+        "isbn": "9794221645078",
+        "image": "https://i.postimg.cc/XZrXgHZJ/born-ACrime.png["
+      },
+      {
+        "id": 8,
+        "title": "Tipping Point",
+        "author": "Malcolm Gladwell",
+        "reviews": "A statistical and social approach into what would make an event increase exponentially, most usually as a result of a tiny change",
+        "isbn": "9794221645079",
+        "image": "https://i.postimg.cc/0rDM3BVK/tipping-Point.png"
+      }
+    ]
+   }
+  
