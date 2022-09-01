@@ -14,4 +14,22 @@ const getDataFromDB = async () => {
     return jsonData;
   };
 
-  
+  const renderBooks = (books) => {
+   
+    const articles = document.getElementById("articles-holder");
+    const cardsArray = [];
+    books.forEach((book) => {
+      //card element
+      const elementsObj = createCardElements();
+      //Book card
+      const card = createBookCard(elementsObj, book);
+      //push each card to the array
+      cardsArray.push(card);
+    });
+    
+    cardsArray.forEach((card) => {
+     
+      articles.appendChild(card);
+    });
+    // console.log(renderBooks);
+  };
