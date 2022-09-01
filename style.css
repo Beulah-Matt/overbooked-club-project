@@ -21,6 +21,7 @@
   .dark-mode {
     background-color: black;
     color: white;
+    background-image: url('/img/darkmode.png');
   }
   
   .light-mode {
