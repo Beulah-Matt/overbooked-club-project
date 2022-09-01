@@ -45,29 +45,30 @@ const getDataFromDB = async () => {
     const author = document.createElement("p");
     const ISBN = document.createElement("p");
     const reviews = document.createElement("p");
-    return { article, img, details, like, bookTitle, author, ISBN, reviews };
+    //const deletebtn = document.createElement('button')
+    return { article, img, details, like, bookTitle, author, ISBN, reviews/*, deletebtn*/};
   };
 
   const createBookCard = (elementsObj, kitabu) => {
-    const { article, img, details, like, bookTitle, author, ISBN, reviews } =
+    const { article, img, details, like, reviews, deletebtn } =
       elementsObj;
     //constructing the bookCard
     details.className = "details";
     like.classList.add("like", "like-no");
-    //author.textContent = `${kitabu.author}`;
     img.src = kitabu.image;
-    //bookTitle.textContent = kitabu.title;
-    //ISBN.textContent = kitabu.isbn;
     reviews.textContent = kitabu.reviews;
-  
-    //article.appendChild(ISBN);
+    // deletebtn.classList = "delete-button"
+    // deletebtn.innerText="Delete"
+    // deletebtn.style.background="aqua"
+    // deletebtn.style.float="left"
     article.appendChild(img);
-    //details.appendChild(author);
-    //details.appendChild(bookTitle);
     details.appendChild(reviews);
     article.appendChild(details);
     article.appendChild(like);
-  
+    //article.appendChild(deletebtn)
+    // deletebtn.addEventListener('click', function(){
+    //     document.querySelectorAll('details').removeChild(article)
+    // })
     return article;
   };
 
