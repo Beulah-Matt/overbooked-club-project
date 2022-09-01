@@ -68,3 +68,31 @@ const getDataFromDB = async () => {
   
     return article;
   };
+
+  const listenForLikes = () => {
+    const likes = document.querySelectorAll(".like");
+    likes.forEach((like) => {
+      like.addEventListener("click", (event) => {
+        event.target.classList.toggle("like-no");
+        event.target.classList.toggle("like-yes");
+        if (event.target.classList.contains("like-yes")) {
+          console.log("I like this!");
+          favouriteData(event.target);
+        } else {
+          console.log("Not so much");
+          favouriteData(event.target);
+        }
+      });
+    });
+  };
+  
+  //Heart that was clicked is the element
+  const favouriteData = (element) => {
+    const parent = element.parentElement;
+    const img = parent.querySelector("img").src;
+    const bookTitle = parent.querySelector("h2").textContent;
+    const author = parent.querySelector("p").textContent;
+    const favouriteObj = { img, bookTitle, author };
+    return favouriteObj;
+  };
+  
