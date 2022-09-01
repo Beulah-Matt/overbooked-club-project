@@ -13,3 +13,5 @@ const getDataFromDB = async () => {
   
     return jsonData;
   };
+
+  
