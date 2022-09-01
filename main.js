@@ -45,3 +45,26 @@ const getDataFromDB = async () => {
     const reviews = document.createElement("p");
     return { article, img, details, like, bookTitle, author, ISBN, reviews };
   };
+
+  const createBookCard = (elementsObj, kitabu) => {
+    const { article, img, details, like, bookTitle, author, ISBN, reviews } =
+      elementsObj;
+    //constructing the bookCard
+    details.className = "details";
+    like.classList.add("like", "like-no");
+    author.textContent = `${kitabu.author}`;
+    img.src = kitabu.image;
+    bookTitle.textContent = kitabu.title;
+    ISBN.textContent = kitabu.isbn;
+    reviews.textContent = kitabu.reviews;
+  
+    article.appendChild(ISBN);
+    article.appendChild(img);
+    details.appendChild(author);
+    details.appendChild(bookTitle);
+    details.appendChild(reviews);
+    article.appendChild(details);
+    article.appendChild(like);
+  
+    return article;
+  };
