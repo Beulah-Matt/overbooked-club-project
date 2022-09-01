@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', init = async () => {
     renderBooks(books);
     //add listeners
     listenForLikes();
-
-   console.log(getBookFromForm(formInputs
-    ));
+    getBookFromForm()
+    
 });
 
 const getDataFromDB = async () => {
@@ -112,9 +111,8 @@ const darkMode = () => {
     element.className = "light-mode";
     content.innerText = "Bright Like The Sun";
   };
-
-let formInputs = [];
-  const getBookFromForm = () => {
+  
+function  getBookFromForm (){
     let form = document.querySelector("form");
     
     form.addEventListener('submit', (e) =>{
@@ -126,15 +124,28 @@ let formInputs = [];
         image:document.querySelector('#img').value,
         reviews: document.querySelector('#review').value
         }
-         formInputs.push(formInput)
-           
-            form.reset();
-        //localStorage.setItem('Books', JSON.stringify(formInputs));
-        //return formInputs;
+           form.reset();
         
+        postBook(formInput);    
       });
     }
-   //console.log(formInputs)
+    
+
+function postBook(formInput){
+    console.log(formInput);
+    fetch("http://localhost:3000/Books", {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(formInput)
+    })
+    .then(res => res.json())
+    //.then(book => console.log(book))
+}
+
+
+   
 
 
    
