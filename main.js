@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', init = async () => {
     //get json data from db
     const books = await getDataFromDB();
     //render data to page
-    renderBooks(members);
+    renderBooks(books);
     //add listeners
     listenForLikes();
 });
@@ -52,16 +52,16 @@ const getDataFromDB = async () => {
     //constructing the bookCard
     details.className = "details";
     like.classList.add("like", "like-no");
-    author.textContent = `${kitabu.author}`;
+    //author.textContent = `${kitabu.author}`;
     img.src = kitabu.image;
-    bookTitle.textContent = kitabu.title;
-    ISBN.textContent = kitabu.isbn;
+    //bookTitle.textContent = kitabu.title;
+    //ISBN.textContent = kitabu.isbn;
     reviews.textContent = kitabu.reviews;
   
-    article.appendChild(ISBN);
+    //article.appendChild(ISBN);
     article.appendChild(img);
-    details.appendChild(author);
-    details.appendChild(bookTitle);
+    //details.appendChild(author);
+    //details.appendChild(bookTitle);
     details.appendChild(reviews);
     article.appendChild(details);
     article.appendChild(like);
@@ -109,4 +109,25 @@ const darkMode = () => {
     element.className = "light-mode";
     content.innerText = "Bright Like The Sun";
   };
+
+  const getBookFromForm = () => {
+    const form = document.querySelector("#book-form");
+      form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        //Get form Values
+        const title = document.querySelector('#title').value
+        const author = document.querySelector('#author').value
+        const ISBN = document.querySelector('#isbn').value
+        const image = document.querySelector('#img').value
+        const reviews = document.querySelector('#reviews').value
+    
+        const book1 = new book1(title, author, ISBN, image, reviews);
+        console.log(book1);
+      });
+  }
+  getBookFromForm();
+
+
+
+
   

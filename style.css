@@ -10,7 +10,23 @@
     margin-top: 10px;
     text-align: center;
   }
+  body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: blanchedalmond;
+    /* background-image: url('/img/background.jpg'); */
+    padding: 1rem;
+  }
   
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  .light-mode {
+    background-color: blanchedalmond;
+    color: black;
+  }
   main {
     display: flex;
     justify-content: space-evenly;
@@ -64,6 +80,11 @@
      background-color: teal;
      font-family: cursive;
      border-radius: 12px;
-     padding: 20px;
+     padding: 1px;
      margin: 4px 2px;
+  }
+  table{
+    width: auto;
+    margin-right: 0px;
+    margin-left: auto;
   }
