@@ -96,3 +96,17 @@ const getDataFromDB = async () => {
     return favouriteObj;
   };
   
+  //Darkmode
+const darkMode = () => {
+    let element = document.body;
+    let content = document.getElementById("DarkModetext");
+    element.className = "dark-mode";
+    content.innerText = "Dark As Night";
+  };
+  const lightMode = () => {
+    let element = document.body;
+    let content = document.getElementById("DarkModetext");
+    element.className = "light-mode";
+    content.innerText = "Bright Like The Sun";
+  };
+  
