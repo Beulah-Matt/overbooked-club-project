@@ -27,3 +27,43 @@
     position: relative; 
     background-color: white;
   }
+
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .description {
+    padding: 10px;
+  }
+  
+  .like {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+  
+  .like-no {
+    background: url("/img/dislike.svg") no-repeat;
+  }
+  
+  .like-yes {
+    background: url("/img/like.svg") no-repeat;
+  }
+  .pull-right {
+    float: right;
+  }
+  .book-form{
+     width: 30%;
+     
+  }
+  button{
+     background-color: teal;
+     font-family: cursive;
+     border-radius: 12px;
+     padding: 20px;
+     margin: 4px 2px;
+  }
