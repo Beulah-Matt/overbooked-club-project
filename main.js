@@ -109,24 +109,45 @@ const darkMode = () => {
     element.className = "light-mode";
     content.innerText = "Bright Like The Sun";
   };
-
+  let form = document.getElementById("#book-form");
+  console.log(form);
   const getBookFromForm = () => {
-    const form = document.querySelector("#book-form");
-      form.addEventListener('submit', (e) =>{
-        e.preventDefault();
-        //Get form Values
-        const title = document.querySelector('#title').value
-        const author = document.querySelector('#author').value
-        const ISBN = document.querySelector('#isbn').value
-        const image = document.querySelector('#img').value
-        const reviews = document.querySelector('#reviews').value
-    
-        const book1 = new book1(title, author, ISBN, image, reviews);
-        console.log(book1);
-      });
-  }
-  getBookFromForm();
 
+//       form.addEventListener('submit', (e) =>{
+//         e.preventDefault();
+//         //Get form Values
+//         const title = document.querySelector('#title').value
+//         const author = document.querySelector('#author').value
+//         const ISBN = document.querySelector('#isbn').value
+//         const image = document.querySelector('#img').value
+//         const reviews = document.querySelector('#reviews').value
+    
+//         const book1 = new book1(title, author, ISBN, image, reviews);
+//         console.log(book1);
+//       });
+   }
+   getBookFromForm();
+
+// const inputForm = document.querySelector('book-form')
+
+// inputForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   const input = document.querySelector('input#searchByID');
+
+//   fetch(`http://localhost:3000/Books/${input.value}`)
+//   .then(response => response.json())
+//   .then(data => {
+//     const title = document.querySelector('section#title');
+//     const author = document.querySelector('section#author');
+//     const isbn = document.querySelector('section#isbn');
+//     const image = document.querySelector('section#img');
+//     const review = document.querySelector('section#review');
+
+//     title.innerText = data.title;
+//     author.innerText = data.author;
+//     isbn.innerText= data.isbn
+//   });
+// });
 
 
 
