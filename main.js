@@ -6,3 +6,10 @@ document.addEventListener('DOMContentLoaded', init = async () => {
     //add listeners
     listenForLikes();
 });
+
+const getDataFromDB = async () => {
+    const dataStream = await fetch("http://localhost:3000/Books");
+    const jsonData = await dataStream.json();
+  
+    return jsonData;
+  };
