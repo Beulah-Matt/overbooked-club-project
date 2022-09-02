@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', init = async () => {
     renderBooks(books);
     //add listeners
     listenForLikes();
+    
     getBookFromForm()
     
 });
@@ -45,32 +46,40 @@ const getDataFromDB = async () => {
     const author = document.createElement("p");
     const ISBN = document.createElement("p");
     const reviews = document.createElement("p");
-    //const deletebtn = document.createElement('button')
-    return { article, img, details, like, bookTitle, author, ISBN, reviews/*, deletebtn*/};
+    // const deletebtn = document.createElement('button')
+    return { article, img, details, like, bookTitle, author, ISBN, reviews};
   };
 
   const createBookCard = (elementsObj, kitabu) => {
-    const { article, img, details, like, reviews, deletebtn } =
+    const { article, img, details, like, reviews} =
       elementsObj;
     //constructing the bookCard
     details.className = "details";
     like.classList.add("like", "like-no");
     img.src = kitabu.image;
     reviews.textContent = kitabu.reviews;
-    // deletebtn.classList = "delete-button"
-    // deletebtn.innerText="Delete"
-    // deletebtn.style.background="aqua"
-    // deletebtn.style.float="left"
+    reviews.classList.add('reviewing');
     article.appendChild(img);
     details.appendChild(reviews);
     article.appendChild(details);
     article.appendChild(like);
-    //article.appendChild(deletebtn)
-    // deletebtn.addEventListener('click', function(){
-    //     document.querySelectorAll('details').removeChild(article)
-    // })
+  
+   
     return article;
-  };
+
+}
+const handleDelete = ( ) =>{
+  const deletebtn = document.createElement('button')
+  deletebtn.classList = "delete-button"
+  deletebtn.innerText="Delete"
+  deletebtn.style.background="aqua"
+  deletebtn.style.float="left"
+  article.append(deletebtn)
+  deletebtn.addEventListener('click', function(){
+    document.querySelectorAll('details').removeChild() 
+})
+}
+
 
   const listenForLikes = () => {
     const likes = document.querySelectorAll(".like");

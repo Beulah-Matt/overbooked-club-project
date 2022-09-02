@@ -44,14 +44,13 @@
     position: relative; 
     background-color: white;
   }
-
   img {
     display: block;
     width: 100%;
     border-radius: 15px 15px 0 0;
   }
   
-  .description {
+  .details {
     padding: 10px;
   }
   
